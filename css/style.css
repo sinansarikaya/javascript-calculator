@@ -52,9 +52,7 @@ body {
 }
 .calculator {
   width: 95%;
-  height: 95%;
   max-width: 350px;
-  max-height: 500px;
   background-color: #064663;
   border: 2px solid #eee;
   border-radius: 1rem;
@@ -85,15 +83,16 @@ body {
   overflow: hidden;
 }
 .calculator #value .storedValue {
-  height: 40%;
+  height: 1.5rem;
   color: hsl(231, 62%, 78%);
   font-size: 1.5rem;
   padding: 0.2rem 0;
+  overflow: hidden;
 }
 .calculator #value .value {
-  height: 60%;
   font-size: 2.5rem;
   padding: 0.2rem 0;
+  overflow: hidden;
 }
 .buttons {
   height: 80%;
@@ -102,6 +101,7 @@ body {
   gap: 1rem;
 }
 .buttons .btn {
+  padding: 0.5rem;
   font-size: 1.5rem;
   border: 0;
   border-radius: 0.5rem;
