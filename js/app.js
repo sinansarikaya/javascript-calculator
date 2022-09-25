@@ -11,7 +11,6 @@ let progress = null;
 const showResult = () => {
   calculatorValue.innerText = result;
   storedValue.innerText = progress;
-  console.log(storedNums);
 };
 showResult();
 
@@ -58,29 +57,41 @@ const negativePositive = () => {
 };
 
 const clear = () => {
-  progress = null;
   result = "0";
+  storedNums = null;
+  operator = null;
+  hasSecondVal = false;
+  progress = null;
   showResult();
 };
 
 const operations = (opr) => {
   const val = parseFloat(result);
 
+  if (operator && hasSecondVal) {
+    operator = opr;
+    return;
+  }
+
   if (storedNums === null) {
     storedNums = val;
   } else if (operator) {
     const showResult = calculate(storedNums, val, operator);
 
-    result = String(showResult);
+    result = `${parseFloat(showResult.toFixed(10))}`;
     storedNums = showResult;
   }
   hasSecondVal = true;
   operator = opr;
 
-  if (!val == 0 && opr != "=") {
-    progress === null
-      ? (progress = `${val} ${opr} `)
-      : (progress += `${val} ${opr} `);
+  if (!val == 0) {
+    if (opr != "=") {
+      progress === null
+        ? (progress = `${val} ${opr} `)
+        : (progress += `${val} ${opr} `);
+    } else {
+      progress === null ? (progress = `${val} `) : (progress += `${val}`);
+    }
   }
 
   showResult();
