@@ -22,8 +22,10 @@ body {
   background-color: #ecb365;
 }
 .calculator {
-  width: 340px;
-  height: 500px;
+  width: 95%;
+  height: 95%;
+  max-width: 350px;
+  max-height: 500px;
   background-color: #064663;
   border: 2px solid #eee;
   border-radius: 1rem;
@@ -97,6 +99,8 @@ body {
 .buttons .btn.plus {
   background-color: hsl(197, 97%, 40%);
   color: #fff;
+  grid-column: 4 / 4;
+  grid-row: 3 / 5;
 }
 .buttons .btn.plus:hover {
   background-color: hsl(197, 97%, 40%);
