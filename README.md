@@ -18,12 +18,4 @@ $ git clone https://github.com/sinansarikaya/javascript-calculator.git
 
 #### [View Demo](https://sinansarikaya.github.io/javascript-calculator/)
 
-<!-- ![JavaScript Student Data](./img/demo.jpeg)
-
-<hr />
-
-### Try yourself
-
-You can try to make it yourself by looking at the design in Figma.
-
-#### [View the design in Figma](https://www.figma.com/file/ayNafC547sY1sNEHo7YtZl/Colors-Palette-App?node-id=0%3A1) -->
+![JavaScript Student Data](./img/demo.jpeg)
