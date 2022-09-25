@@ -44,18 +44,6 @@ const decimal = () => {
   }
 };
 
-const negativePositive = () => {
-  if (result === "0") {
-    return;
-  }
-  if (result.includes("-")) {
-    result = result.replace("-", "");
-  } else {
-    result = "-" + result;
-  }
-  showResult();
-};
-
 const clear = () => {
   result = "0";
   storedNums = null;
@@ -112,11 +100,6 @@ buttons.addEventListener("click", (e) => {
 
   if (element.matches(".decimal")) {
     decimal();
-    return;
-  }
-
-  if (element.matches(".negPoz")) {
-    negativePositive();
     return;
   }
 
